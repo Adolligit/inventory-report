@@ -26,7 +26,3 @@ class SimpleReport:
             f"Data de validade mais próxima: {min(close_to_expiration)}\n"
             f"Empresa com mais produtos: {enterprise}"
         )
-
-# Data de fabricação mais antiga: YYYY-MM-DD
-# Data de validade mais próxima: YYYY-MM-DD
-# Empresa com mais produtos: NOME DA EMPRESA
