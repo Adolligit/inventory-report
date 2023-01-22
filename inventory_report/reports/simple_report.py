@@ -13,9 +13,9 @@ class SimpleReport:
         close_to_expiration = [
             key["data_de_validade"]
             for key in list_product
-            if key["data_de_validade"] > datetime.now()
+            if key["data_de_validade"] > datetime.now().strftime("%Y-%m-%d")
         ]
-      
+
         enterprise = Counter(
             key["nome_da_empresa"]
             for key in list_product
