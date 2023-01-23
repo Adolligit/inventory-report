@@ -33,4 +33,3 @@ class CompleteReport(SimpleReport):
             f"Empresa com mais produtos: {enterprise[0][0]}\n"
             f"Produtos estocados por empresa:\n{stocked_products}"
         )
-
