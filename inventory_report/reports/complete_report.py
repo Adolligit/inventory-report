@@ -30,14 +30,7 @@ class CompleteReport(SimpleReport):
         return (
             f"Data de fabricação mais antiga: {min(oldest_manufacture)}\n"
             f"Data de validade mais próxima: {min(close_to_expiration)}\n"
-            f"Empresa com mais produtos: {enterprise[0][0]}"
-            f"Produtos estocados por empresa:${stocked_products}"
+            f"Empresa com mais produtos: {enterprise[0][0]}\n"
+            f"Produtos estocados por empresa:\n{stocked_products}"
         )
 
-# Data de fabricação mais antiga: YYYY-MM-DD
-# Data de validade mais próxima: YYYY-MM-DD
-# Empresa com mais produtos: NOME DA EMPRESA
-# Produtos estocados por empresa:
-# - Physicians Total Care, Inc.: QUANTIDADE
-# - Newton Laboratories, Inc.: QUANTIDADE
-# - Forces of Nature: QUANTIDADE
