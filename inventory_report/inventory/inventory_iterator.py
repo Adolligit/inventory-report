@@ -7,6 +7,6 @@ class InventoryIterator(Iterator):
         self.__index = 0
 
     def __next__(self):
-        result = self.iterable[self.__index]
+        result = self.data[self.__index]
         self.__index += 1
         return result
