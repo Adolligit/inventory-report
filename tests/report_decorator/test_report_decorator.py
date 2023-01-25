@@ -19,11 +19,16 @@ def test_decorar_relatorio():
     manufature_date = "Data de fabricação mais antiga:"
     expiration_date = "Data de validade mais próxima:"
     enterprise = "Empresa com mais produtos:"
+    dates = (
+        PRODUCT["data_de_fabricacao"],
+        PRODUCT["data_de_validade"],
+        PRODUCT["nome_da_empresa"]
+    )
 
     expected = (
-        f"\033[32m{manufature_date}\033[0m \033[36m2021-02-18\033[0m\n"
-        f"\033[32m{expiration_date}\033[0m \033[36m2023-09-17\033[0m\n"
-        f"\033[32m{enterprise}\033[0m \033[31mTarget Corporation\033[0m"
+        f"\033[32m{manufature_date}\033[0m \033[36m{dates[0]}\033[0m\n"
+        f"\033[32m{expiration_date}\033[0m \033[36m{dates[1]}\033[0m\n"
+        f"\033[32m{enterprise}\033[0m \033[31m{dates[2]}\033[0m"
     )
 
     assert colored_print == expected
